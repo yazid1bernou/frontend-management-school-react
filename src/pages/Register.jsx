@@ -1,5 +1,5 @@
 export default function Register () {
     return (
-        <p> Register page </p>
+        <h1 className="text-3xl"> Register page </h1>
     )
 };

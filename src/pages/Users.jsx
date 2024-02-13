@@ -1,5 +1,5 @@
 export default function Users () {
     return (
-        <p> Users page </p>
+        <h1 className="text-3xl"> Users page </h1>
     )
 };

@@ -1,5 +1,5 @@
 export default function Login () {
     return (
-        <p>  Login page </p>
+        <h1 className="text-3xl">  Login page </h1>
     )
 };
