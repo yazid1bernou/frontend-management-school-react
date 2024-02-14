@@ -32,9 +32,9 @@ export default function StudentLogin () {
     })
 
     // 2. Define a submit handler.
-    function onSubmit(values) {
-         const axios = axiosClient.defaults
-          console.log(values , axios)
+    const  onSubmit = async (values)  => {     // Arrow function 
+         const data =  await axiosClient.post('/login' , values)
+          console.log(data)
   }
 
     return <>
