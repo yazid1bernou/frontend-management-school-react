@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import {axiosClient} from "../../api/axios.js";
 
 const formSchema = z.object({
   email: z.string().email().min(2).max(50),
@@ -25,17 +25,16 @@ export default function StudentLogin () {
     const form = useForm({
       resolver: zodResolver(formSchema),
       defaultValues : {
-        email : '',
-        password : ''
+        email : 'yazid1bernou@gmail.com',
+        password : '19880710'
       }
       
     })
 
     // 2. Define a submit handler.
     function onSubmit(values) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
+         const axios = axiosClient.defaults
+          console.log(values , axios)
   }
 
     return <>
